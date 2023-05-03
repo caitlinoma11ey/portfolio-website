@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../buttons/Button";
+import Link from "next/link";
 
 const Project = () => {
 
@@ -13,10 +14,31 @@ const Project = () => {
     University subject. It was designed to aid in the analysis and detection of leaks.";
 
     const projectInformation = [
-    { key: 0, path: "/images/project-portfolio.svg", title: "Portfolio Website", subtitle: "Coding|Design", description:portfolioDesc},
-    { key: 1, path: "/images/project-marketing.svg", title: "TechSoc Marketing", subtitle: "Design|Marketing", description: marketingDesc },
-    { key: 2, path: "/images/project-dashboard.svg", title: "Network Dashboard", subtitle: "Coding|Design", description: dashboardDesc },
-    ]
+      {
+        key: 0,
+        path: "/images/project-portfolio.svg",
+        title: "Portfolio Website",
+        subtitle: "Coding|Design",
+        description: portfolioDesc,
+        link: "https://github.com/caitlinoma11ey/portfolio-website",
+      },
+      {
+        key: 1,
+        path: "/images/project-marketing.svg",
+        title: "TechSoc Marketing",
+        subtitle: "Design|Marketing",
+        description: marketingDesc,
+        link: "/techsoc_marketing",
+      },
+      {
+        key: 2,
+        path: "/images/project-dashboard.svg",
+        title: "Network Dashboard",
+        subtitle: "Coding|Design",
+        description: dashboardDesc,
+        link: "/network_dashboard",
+      },
+    ];
 
     function isEven(key){
         if(key % 2 == 0){
@@ -35,9 +57,11 @@ const Project = () => {
                             <div className={isEven(link.key) ? "project__right__text" : "project__left__text"}>
                                 <div className="project__text">
                                     <h3>{link.title}</h3>
-                                    <h4>{link.subtitle}</h4>
+                                    <h5>{link.subtitle}</h5>
                                     <p>{link.description}</p>
-                                    <Button label="View More" type="primary" handleClick={null} />
+                                    <Link href={link.link}>
+                                        <Button label="View More" type="primary" />
+                                    </Link>
                                 </div>
                             </div>
                         </div>
