@@ -77,6 +77,10 @@ select {
   }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* -------- END CSS RESET -------- */
 
 :root {
@@ -234,6 +238,10 @@ p {
 .about__text {
   margin-right: 100px;
   line-height: 30px;
+}
+
+#h2__highlight {
+  color: #8381fc;
 }
 
 .my__work {

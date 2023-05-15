@@ -24,7 +24,8 @@ export default function Homepage() {
       <div>
         {/* Header */}
         <div className="header">
-          <Image className="header__text"
+          <Image
+            className="header__text"
             src="/images/header-text.svg"
             width={1095}
             height={271}
@@ -37,7 +38,8 @@ export default function Homepage() {
           <div class="about">
             <div class="about__text">
               <h2>
-                I enjoy developing and <br /> desigining things
+                I enjoy <span id="h2__highlight">developing</span> and <br />
+                <span id="h2__highlight">designing</span> things
               </h2>
               <p>
                 I’m a third year student at the University of Technology Sydney
@@ -47,7 +49,11 @@ export default function Homepage() {
                 year of internship experience working with React and front-end
                 products. I'm looking to upskill myself and learn UX/UI.
               </p>
-              <Button label="Learn more" type="primary" handleClick={(e) => handleClick(e, "/about")}/>
+              <Button
+                label="Learn more"
+                type="primary"
+                handleClick={(e) => handleClick(e, "/about")}
+              />
             </div>
             <Image
               class="about__image"
@@ -59,7 +65,7 @@ export default function Homepage() {
           </div>
         </div>
         {/* Projects */}
-        <div id="#project" className="my__work">
+        <div id="projects" className="my__work">
           <div className="my__work__content">
             <Image
               className="my__work__text"
