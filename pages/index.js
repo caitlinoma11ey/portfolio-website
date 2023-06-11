@@ -15,10 +15,10 @@ export default function Homepage() {
         }
       };
 
-      const handleClick = (e, path) => {
-        e.preventDefault();
-        router.push(path);
-      }
+    const handleClick = (e, path) => {
+      e.preventDefault();
+      router.push(path);
+    }
 
     return (
       <div>
@@ -34,9 +34,9 @@ export default function Homepage() {
           <Button label="Explore" type="header" handleClick={scrollToContent} />
         </div>
         {/* About me  */}
-        <div class="about__container">
-          <div class="about">
-            <div class="about__text">
+        <div className="about__container">
+          <div className="about">
+            <div className="about__text">
               <h2>
                 I enjoy <span id="h2__highlight">developing</span> and <br />
                 <span id="h2__highlight">designing</span> things
@@ -56,7 +56,7 @@ export default function Homepage() {
               />
             </div>
             <Image
-              class="about__image"
+              className="about__image"
               src="/images/woman-on-computer.svg"
               width={450}
               height={420}
