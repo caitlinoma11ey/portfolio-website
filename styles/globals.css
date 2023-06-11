@@ -147,13 +147,11 @@ p {
 }
 
 .navbar{
-  width: auto;
-  padding: 15px 35px;
+  background-color: var(--color-primary);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
+  width: 100%;
+  padding: 20px 35px;
+  position: fixed;
   margin-bottom: 10px;
 }
 
@@ -164,10 +162,10 @@ p {
 
 .navbar ul {
   font-weight: 600;
-  display: flex;
   gap: 30px;
   list-style-type: none;
-  justify-content: left;
+  display: flex;
+  margin-left: auto;
 }
 
 .navbar a {
@@ -181,7 +179,7 @@ p {
 }
 
 .header {
-  min-height: 91vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -190,7 +188,7 @@ p {
 }
 
 .header__text {
-  margin: 22px 0px 40px 0px;
+  margin: 55px 0px 40px 0px;
 }
 
 .btn {
