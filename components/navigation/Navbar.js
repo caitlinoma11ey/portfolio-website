@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 function Navbar() {
 
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
@@ -11,10 +11,8 @@ function Navbar() {
     let currentScrollPosition = 0;
 
     window.addEventListener("scroll", function (e) {
-      // Get the new Value
       currentScrollPosition = window.pageYOffset;
 
-      //Subtract the two and conclude
       if (previousScrollPosition - currentScrollPosition > 0) {
         setShow(false);
       } else if (previousScrollPosition - currentScrollPosition < 0) {

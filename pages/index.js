@@ -12,7 +12,7 @@ export default function Homepage() {
     const navbarHeight = document.querySelector(".navbar").offsetHeight;
 
     if (element && navbarHeight) {
-      const scrollToY = element.offsetTop - navbarHeight;
+      const scrollToY = element.offsetTop - navbarHeight + 70;
       window.scrollTo({ top: scrollToY, behavior: "smooth" });
     } 
   };
