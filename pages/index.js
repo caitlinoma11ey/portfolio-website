@@ -3,6 +3,8 @@ import Button from '@/components/buttons/Button';
 import Project from '@/components/layouts/Project';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Homepage() {
   const router = useRouter();
@@ -12,7 +14,7 @@ export default function Homepage() {
     const navbarHeight = document.querySelector(".navbar").offsetHeight;
 
     if (element && navbarHeight) {
-      const scrollToY = element.offsetTop - navbarHeight + 70;
+      const scrollToY = element.offsetTop - navbarHeight - 20;
       window.scrollTo({ top: scrollToY, behavior: "smooth" });
     } 
   };
@@ -36,7 +38,7 @@ export default function Homepage() {
         <Button label="Explore" type="header" handleClick={scrollToContent} />
       </div>
       {/* About me  */}
-      <div className="about__container">
+      <div id="about" className="about__container">
         <div className="about">
           <div className="about__text">
             <h2>
@@ -44,18 +46,17 @@ export default function Homepage() {
               <span id="h2__highlight">designing</span> things
             </h2>
             <p>
-              I’m a third year student at the University of Technology Sydney
-              (UTS) studying a Bachelor of Information Technology. My passion
-              lies in creating visually stunning and engaging user experiences
-              through front-end development and UX/UI design. I have over a
-              year of internship experience working with React and front-end
-              products. I'm looking to upskill myself and learn UX/UI.
+              Hey there, I'm Caitlin, a final year student at the University of Technology Sydney.
+              I study a Bachelor of Information Technology with a focus on Software Development.              
+              My passion lies in creating visually stunning and engaging user experiences
+              through front end development and UX/UI design.
+              I'm currently working at Macquarie Bank as a full-stack developer.<br></br>
             </p>
-            <Button
-              label="Learn more"
-              type="primary"
-              handleClick={(e) => handleClick(e, "/about")}
-            />
+            <p>
+              When I'm not at my computer, you can find me walking my two dogs, reading a book or 
+              struggling to commit to a TV Series. I also love to travel and have been lucky enough to 
+              study in Berlin, Germany. 
+            </p>
           </div>
           <Image
             className="about__image"
